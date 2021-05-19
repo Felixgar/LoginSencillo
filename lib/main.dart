@@ -49,47 +49,42 @@ class _IngresoSistemaState extends State<LoginScreen> {
           onPressed: () {
             print('Menu button');
           },
-                  actions: <Widget>[
-          IconButton(
-            icon: Icon(
-              Icons.search,
-              semanticLabel: 'search',
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(
+                Icons.search,
+                semanticLabel: 'search',
+              ),
+              onPressed: () {
+                print('Search button');
+              },
             ),
-            onPressed: () {
-              print('Search button');
-            },
-          ),
-          IconButton(
-            icon: Icon(
-              Icons.tune,
-              semanticLabel: 'filter',
+            IconButton(
+              icon: Icon(
+                Icons.tune,
+                semanticLabel: 'filter',
+              ),
+              onPressed: () {
+                print('Filter button');
+              },
             ),
-            onPressed: () {
-              print('Filter button');
-            },
-          ),
-        ],
-        title: Text("Ingreso al Sistema"),
-        
+          ],
+          title: Text("Ingreso al Sistema"),
         ), //fin de appbar
         body: SafeArea(
           child: ListView(
             padding: EdgeInsets.symmetric(horizontal: 24.0),
-            column(
             children: <Widget>[
-                  SizedBox(height:80.0),
-                Column(
-              children: <Widget>[
-                Image.asset('assets/diamond.png'),
-                SizedBox(height: 16.0),
-              ],
-            ),
-
-              
+              SizedBox(height: 80.0),
+              Column(
+                children: <Widget>[
+                  Image.asset('assets/diamond.png'),
+                  SizedBox(height: 16.0),
+                ],
+              ),
             ],
           ),
-        ),//SafeArea       
-        
+        ), //SafeArea
       ),
     ); //fin de scaffold
   }
