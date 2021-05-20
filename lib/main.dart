@@ -93,6 +93,39 @@ class _IngresoSistemaState extends State<LoginScreen> {
                           labelText: 'Username',
                         ),
                       ),
+                      TextField(
+                    decoration: InputDecoration(
+                      filled: true,
+                      labelText: 'Password',
+                    ),
+                    obscureText: true,
+                  ),
+                      Padding(
+                    padding: const EdgeInsets.only(top: 18.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        FlatButton(
+                          child: Text('CANCEL'),
+                          onPressed: () {
+                            setState(() {
+                              isLogin = false;
+                            });
+                          },
+                        ),
+                        RaisedButton(
+                          child: Text(
+                            'NEXT2',
+                          ),
+                          onPressed: () {
+                            setState(() {
+                              isLogin = true;
+                            });
+                          },
+                        ),
+                      ],//fin de children
+                    ),//fin de child
+                  )//fin de padding
                     ], //fin de widget
                   ) //fin columna
                 }
