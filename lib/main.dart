@@ -83,7 +83,7 @@ class _IngresoSistemaState extends State<IngresoSistema> {
                 ],
               ),
               if (!acceso)
-                {
+                
                   Column(
                     children: <Widget>[
                       TextField(
@@ -128,8 +128,8 @@ class _IngresoSistemaState extends State<IngresoSistema> {
                   )//fin de padding
                     ], //fin de widget
                   ) //fin columna
-                }
-                else{
+                
+                else
                   Center(
                 child: Column(
                   children: <Widget>[
@@ -146,7 +146,7 @@ class _IngresoSistemaState extends State<IngresoSistema> {
                   ],
                 ),
               )
-                }
+                
               
             ],
           ),
