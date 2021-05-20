@@ -82,6 +82,24 @@ class _IngresoSistemaState extends State<LoginScreen> {
                   SizedBox(height: 16.0),
                 ],
               ),
+              if (!acceso){
+              Column(
+                children: <Widget> [
+                   TextField(
+                    decoration: InputDecoration(
+                      filled: true,
+                      // fillColor: Colors.amber,
+                      labelText: 'Username',
+                    ),
+                  ),
+
+                ]//fin de widget
+
+              )//fin columna
+              }
+              else{
+
+              }
             ],
           ),
         ), //SafeArea
