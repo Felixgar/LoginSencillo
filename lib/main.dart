@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MiLogin());
+void main() => runApp(Login());
 
-class MiLogin extends StatelessWidget {
+class Login extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'AppMaster Castillo',
+      title: 'AppMaster Garcia',
       theme: ThemeData(
         brightness: Brightness.light,
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.red,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       darkTheme: ThemeData(
@@ -22,7 +22,7 @@ class MiLogin extends StatelessWidget {
       home: IngresoSistema(),
     ); //fin de material app
   } //fin de widget build
-} //fin de clase MiLogin
+} //fin de clase Login
 
 class IngresoSistema extends StatefulWidget {
   @override
@@ -69,7 +69,7 @@ class _IngresoSistemaState extends State<IngresoSistema> {
                 print('Filter button');
               }),
         ],
-        title: Text('Inicio de sesion Castillo'),
+        title: Text('Inicio de sesion Garcia'),
       ), //fin de appbar
       body: SafeArea(
         child: ListView(
@@ -80,78 +80,76 @@ class _IngresoSistemaState extends State<IngresoSistema> {
               children: <Widget>[
                 Image.asset('assets/diamond.png'),
                 SizedBox(height: 16.0),
-                ],
-              ),
-              if (!acceso)
-                
-                  Column(
-                    children: <Widget>[
-                      TextField(
-                        decoration: InputDecoration(
-                          filled: true,
-                          // fillColor: Colors.amber,
-                          labelText: 'Username',
-                        ),
-                      ),
-                      TextField(
+              ],
+            ),
+            if(!acceso)
+              Column(
+                children: <Widget>[
+                  TextField(
+                    decoration: InputDecoration(
+                      filled: true,
+                      // fillColor: Colors.amber,
+                      labelText: 'Username',
+                    ),
+                  ),
+                  SizedBox(height: 12.0),
+                  TextField(
                     decoration: InputDecoration(
                       filled: true,
                       labelText: 'Password',
                     ),
                     obscureText: true,
                   ),
-                      Padding(
+                  Padding(
                     padding: const EdgeInsets.only(top: 18.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: <Widget>[
                         FlatButton(
-                          child: Text('CANCEL'),
+                          child: Text('Cancelar'),
                           onPressed: () {
                             setState(() {
                               acceso = false;
                             });
                           },
-                        ),
+                        ), //fin flat button
                         RaisedButton(
                           child: Text(
-                            'NEXT2',
+                            'Siguiente',
                           ),
                           onPressed: () {
                             setState(() {
                               acceso = true;
                             });
                           },
-                        ),
-                      ],//fin de children
-                    ),//fin de child
-                  )//fin de padding
-                    ], //fin de widget
-                  ) //fin columna
-                
-                else
-                  Center(
+                        ), //fin raised button
+                      ], //fin widget[]
+                    ), //fin de row
+                  ), //fin de padding
+                ], //fin de widget[]
+              ) //fin de columna
+              //if verdadero
+            else
+              Center(
                 child: Column(
                   children: <Widget>[
-                    Text('YAY, I am login!'),
+                    Text('YAY, Estoy ingresando!'),
                     RaisedButton(
                       elevation: 20.0,
-                      child: Text('Logout'),
+                      child: Text('Cerrar sesión'),
                       onPressed: () {
                         setState(() {
-                          isLogin = false;
+                          acceso = false;
                         });
                       },
-                    )
-                  ],
-                ),
-              )
-                
-              
-            ],
-          ),
-        ), //SafeArea
-      );
+                    ),
+                  ], //fin de widget[]
+                ), //fin de  column
+              ), //fin de center
+              //else
+          ], //fin de widget[]
+        ), //fin de list view
+      ), //era segura
     ); //fin de scaffold
   }
 } //fin class _IngresoSistema
