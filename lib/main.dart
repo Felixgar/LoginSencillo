@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(Login());
+void main() => runApp(MiLogin());
 
-class Login extends StatelessWidget {
+class MiLogin extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'AppMaster Garcia',
+      title: 'AppMaster Castillo',
       theme: ThemeData(
         brightness: Brightness.light,
         primarySwatch: Colors.blue,
@@ -22,7 +22,7 @@ class Login extends StatelessWidget {
       home: IngresoSistema(),
     ); //fin de material app
   } //fin de widget build
-} //fin de clase Login
+} //fin de clase MiLogin
 
 class IngresoSistema extends StatefulWidget {
   @override
@@ -50,7 +50,7 @@ class _IngresoSistemaState extends State<IngresoSistema> {
             print('Menu button');
           },
         ),
-          actions: <Widget>[
+        actions: <Widget>[
           IconButton(
             icon: Icon(
               Icons.search,
@@ -72,14 +72,14 @@ class _IngresoSistemaState extends State<IngresoSistema> {
         title: Text('Inicio de sesion Castillo'),
       ), //fin de appbar
       body: SafeArea(
-          child: ListView(
-            padding: EdgeInsets.symmetric(horizontal: 24.0),
-            children: <Widget>[
-              SizedBox(height: 80.0),
-              Column(
-                children: <Widget>[
-                  Image.asset('assets/diamond.png'),
-                  SizedBox(height: 16.0),
+        child: ListView(
+          padding: EdgeInsets.symmetric(horizontal: 24.0),
+          children: <Widget>[
+            SizedBox(height: 80.0),
+            Column(
+              children: <Widget>[
+                Image.asset('assets/diamond.png'),
+                SizedBox(height: 16.0),
                 ],
               ),
               if (!acceso)
