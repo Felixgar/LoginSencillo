@@ -29,7 +29,7 @@ class IngresoSistema extends StatefulWidget {
   _IngresoSistemaState createState() => _IngresoSistemaState();
 } //fin clase ingresosistema
 
-class _IngresoSistemaState extends State<LoginScreen> {
+class _IngresoSistemaState extends State<IngresoSistema> {
   bool acceso = false;
 
   @override
@@ -49,7 +49,7 @@ class _IngresoSistemaState extends State<LoginScreen> {
           onPressed: () {
             print('Menu button');
           },
-          Actions: <Widget>[
+          actions: <Widget>[
             IconButton(
               icon: Icon(
                 Icons.search,
