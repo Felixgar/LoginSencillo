@@ -109,7 +109,7 @@ class _IngresoSistemaState extends State<LoginScreen> {
                           child: Text('CANCEL'),
                           onPressed: () {
                             setState(() {
-                              isLogin = false;
+                              acceso = false;
                             });
                           },
                         ),
@@ -119,7 +119,7 @@ class _IngresoSistemaState extends State<LoginScreen> {
                           ),
                           onPressed: () {
                             setState(() {
-                              isLogin = true;
+                              acceso = true;
                             });
                           },
                         ),
