@@ -49,29 +49,28 @@ class _IngresoSistemaState extends State<IngresoSistema> {
           onPressed: () {
             print('Menu button');
           },
-          actions:<Widget>[
-            IconButton(
-              icon: Icon(
-                Icons.search,
-                semanticLabel: 'search',
-              ),
-              onPressed: () {
-                print('Search button');
-              },
+          actions: <Widget>[
+          IconButton(
+            icon: Icon(
+              Icons.search,
+              semanticLabel: 'search',
             ),
-            IconButton(
+            onPressed: () {
+              print('Search button');
+            },
+          ),
+          IconButton(
               icon: Icon(
                 Icons.tune,
-                semanticLabel: 'filter',
+                semanticLabel: 'Filter',
               ),
               onPressed: () {
                 print('Filter button');
-              },
-            ),
-          ],
-          title: Text("Ingreso al Sistema"),
-        ), //fin de appbar
-        body: SafeArea(
+              }),
+        ],
+        title: Text('Inicio de sesion Castillo'),
+      ), //fin de appbar
+      body: SafeArea(
           child: ListView(
             padding: EdgeInsets.symmetric(horizontal: 24.0),
             children: <Widget>[
