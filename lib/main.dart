@@ -96,8 +96,7 @@ class _IngresoSistemaState extends State<LoginScreen> {
                     ], //fin de widget
                   ) //fin columna
                 }
-              else
-                {}
+              
             ],
           ),
         ), //SafeArea
