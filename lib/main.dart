@@ -129,6 +129,24 @@ class _IngresoSistemaState extends State<IngresoSistema> {
                     ], //fin de widget
                   ) //fin columna
                 }
+                else{
+                  Center(
+                child: Column(
+                  children: <Widget>[
+                    Text('YAY, I am login!'),
+                    RaisedButton(
+                      elevation: 20.0,
+                      child: Text('Logout'),
+                      onPressed: () {
+                        setState(() {
+                          isLogin = false;
+                        });
+                      },
+                    )
+                  ],
+                ),
+              )
+                }
               
             ],
           ),
