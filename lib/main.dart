@@ -49,7 +49,7 @@ class _IngresoSistemaState extends State<IngresoSistema> {
           onPressed: () {
             print('Menu button');
           },
-        )
+        ),
         actions: <Widget>[
           IconButton(
             icon: Icon(
@@ -151,7 +151,7 @@ class _IngresoSistemaState extends State<IngresoSistema> {
             ],
           ),
         ), //SafeArea
-      ),
+      );
     ); //fin de scaffold
   }
 } //fin class _IngresoSistema
